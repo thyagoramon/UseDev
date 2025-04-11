@@ -4,7 +4,7 @@ A página mostrará um menu de navegação no cabeçalho, um banner de divulgaç
 
 ![imagem 1](https://github.com/user-attachments/assets/d0f3ab8c-66a3-4582-b89b-7c041e8c9f69)
 
-[Clique aqui para visualizar a página](link)
+[Clique aqui para visualizar a página](https://thyagoramon.github.io/UseDev/)
 
 ## Funcionalidades da página
 - Responsividade se ajustando a diferentes tamanhos de tela: desktop, tablet e smartphone.
