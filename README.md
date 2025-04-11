@@ -1,6 +1,6 @@
 # UseDev
 
-A página mostrará um menu de navegação no cabeçalho, um banner de divulgação, lista de categorias e produtos, assim como uma seção de cadastro para a newsletter e um rodapé com links relacionados a aplicação.
+Home page ta loja fictícia UseDev, desenvolvida ao longo da formação em front-end "CSS avançado: implementando designs com Grid, Flexbox e Sass" da Alura. A página contém um menu de navegação no cabeçalho, um banner de divulgação, lista de categorias e produtos, assim como uma seção de cadastro para a newsletter e um rodapé com links relacionados a aplicação.
 
 ![imagem 1](https://github.com/user-attachments/assets/d0f3ab8c-66a3-4582-b89b-7c041e8c9f69)
 
