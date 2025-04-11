@@ -1,0 +1,107 @@
+.newsletter {
+    background-color: var(--cor-destaque-secundario);
+    padding: 80px 12.5%;
+    text-align: center;
+}
+
+.newsletter h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-principal);
+    font-size: 31px;
+    font-weight: 700;
+    padding-bottom: 24px;
+}
+
+.newsletter p {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-principal);
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 32px;
+}
+
+.newsletter__cadastro {
+    display: flex;
+    gap: 16px;
+    padding: 0 20%;
+}
+
+.newsletter__cadastro input {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-principal);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 16px 24px;
+    width: 100%;
+    background-color: transparent;
+    border: solid 2px var(--cor-texto-principal);
+    border-radius: 32px;
+    outline: none; /*remove o contorno ao clicar no input*/
+    transition: 0.5s;
+}
+
+.newsletter__cadastro input:hover {
+    scale: 1.05;
+}
+
+.newsletter__cadastro input::placeholder {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-principal);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.newsletter__cadastro button {
+    background-color: var(--cor-fundo-botao);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 32px;
+    transition: 0.5s;
+}
+
+.newsletter__cadastro button:hover {
+    scale: 1.1;
+}
+
+@media screen and (max-width: 1280px) {
+    .newsletter {
+        padding: 80px 6%;
+    }
+    .newsletter h3 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .newsletter__cadastro {
+        flex-direction: column;
+        padding: 0 6%;
+        align-items: center;
+    }
+    .newsletter__cadastro input {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .newsletter {
+        padding: 32px;
+    }
+    .newsletter h3 {
+         font-size: 25px;
+         padding-bottom: 32px;
+    }
+    .newsletter p {
+        font-size: 16px;
+        padding-bottom: 32px;
+    }
+    .newsletter__cadastro input::placeholder {
+        font-size: 16px;
+    }
+    .newsletter__cadastro {
+        gap: 32px;
+        padding: 0;
+    }
+}

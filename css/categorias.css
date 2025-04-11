@@ -1,0 +1,97 @@
+.categorias {
+    padding: 80px 12.5% 40px 12.5%;
+    text-align: center;
+}
+
+.categorias__titulo {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-principal);
+    font-size: 39px;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+
+.categorias__paragrafo {
+    font-family: var(--fonte-texto);
+    color: var(--cor-texto-secundario);
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 40px;
+}
+
+.categorias__lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "roupas roupas decoracao"
+    "canecas acessorios acessorios";
+    list-style: none; /*remove as bolinhas da lista*/
+    gap: 32px;
+}
+
+.categorias__lista__item div {
+    background-color: var(--cor-links);
+    padding: 30px;
+    box-shadow: 0px 4px 24px 0px #7b7b7b; /*sombra*/
+    overflow: hidden; /*faz com que o efeito de aumentar a imagem não saia da div*/
+}
+
+.categorias__lista__item img {
+    height: 300px;
+    width: 100%;
+    object-fit: contain; /*ajusta a imagem ao container sem deformar*/
+    transition: 1s;
+}
+
+.categorias__lista__item:hover img {
+    scale: 1.25;
+}
+
+.categorias__lista__item h4 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-texto-principal);
+    font-size: 31px;
+    font-weight: 700;
+    padding: 16px;
+}
+
+.categorias__roupas {
+    grid-area: roupas;
+}
+
+.categorias__decoracao {
+    grid-area: decoracao;
+}
+
+.categorias__canecas {
+    grid-area: canecas;
+}
+
+.categorias__acessorios {
+    grid-area: acessorios;
+}
+
+@media screen and (max-width: 480px) {
+    .categorias {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    .categorias__titulo {
+        font-size: 25px;
+        padding-bottom: 16px;
+    }    
+    .categorias__paragrafo {
+        font-size: 16px;
+        padding-bottom: 32px;
+    }
+    .categorias__lista {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .categorias__lista__item h4 {
+        font-size: 25px;
+    }
+}

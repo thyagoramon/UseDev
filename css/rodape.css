@@ -1,0 +1,172 @@
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.rodape{
+    background-color: var(--cor-links);
+    padding: 80px 12.5% 40px 12.5%;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-family: var(--fonte-texto);
+}
+
+.rodape h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.rodape p, a {
+    color: #d9d9d9;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    transition: 0.5s;
+}
+
+.rodape a:hover {
+    color: var(--cor-destaque-secundario);
+}
+
+.rodape hr {
+    margin: 2rem 0;
+    border: none;
+    height: 1px;
+    background-color: var(--cor-destaque-secundario);
+}
+
+.rodape__grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "logo funcionamento institucional informacoes"
+    "pagamento nada nada redes";
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+
+.rodape__grid__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.rodape__grid__logo{
+    grid-area: logo;
+}
+
+.rodape__grid__logo img {
+    height: 48px;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.rodape__grid__logo p {
+    color: var(--cor-destaque-secundario);
+}
+
+.rodape__grid__funcionamento{
+    grid-area: funcionamento;
+}
+
+.rodape__grid__institucional{
+    grid-area: institucional;
+}
+
+.rodape__grid__informacoes{
+    grid-area: informacoes;
+}
+
+.rodape__grid__pagamento{
+    grid-area: pagamento;
+}
+
+.rodape__grid__pagamento__bandeiras, .rodape__grid__redes__icones{
+    display: flex;
+    gap: 1rem;
+}
+
+.rodape__grid__redes{
+    grid-area: redes;
+}
+
+.rodape__grid__redes img {
+    transition: 0.5s;
+}
+
+.rodape__grid__redes img:hover {
+    scale: 1.25;
+}
+
+.rodape__base {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    background-color: var(--cor-texto);
+    font-size: 16px;
+}
+
+.rodape__base p {
+    font-family: var(--fonte-texto);
+    font-weight: 300;
+    color: #312e2e;
+}
+.rodape__base a {
+    font-weight: 700;
+    color: #312e2e;
+}
+
+@media screen and (max-width: 1280px) {
+    .rodape hr {
+        display: none;
+    }
+
+    .rodape__grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "logo logo logo" 
+        "funcionamento institucional informacoes"
+        "pagamento nada redes";
+    }
+  
+    .rodape__grid__logo {
+        justify-self: center;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+        align-items: center;
+        border-bottom: solid 2px var(--cor-destaque-secundario);
+        width: 100%;
+    }
+
+    .rodape__grid__item {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rodape{
+        padding: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .rodape__grid{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .rodape__base {
+        font-size: 16px;
+        padding: 32px 64px;
+    }
+    .rodape__grid__item{
+        padding: 0;
+        margin: 0;
+    }
+}

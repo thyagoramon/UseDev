@@ -1,0 +1,168 @@
+.cabecalho {
+    width: 100%;
+    padding: 25px 12.5%;
+}
+
+.cabecalho__nav__lista {
+    display: grid;
+    grid-template-columns: 1fr auto 50% auto auto auto; /*layout do grid*/
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    list-style-type: none; /*remove as bolinhas da lista*/
+}
+
+.cabecalho__logo img {
+    height: 48px;
+    transition: 0.5s;
+}
+
+.cabecalho__logo img:hover {
+    scale: 1.1;
+}
+
+.cabecalho__nav__lista__link {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--cor-links);
+    font-family: var(--fonte-texto);
+    transition: 0.5s;
+}
+
+.cabecalho__nav__lista__link:hover {
+    transform: scale(1.1);
+}
+
+.cabecalho__pesquisa {
+    position: relative;
+}
+
+.cabecalho__pesquisa input {
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    background-color: var(--cor-texto);
+    border-radius: 32px;
+    border: none;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: var(--fonte-texto);
+    color: var(--cor-link);
+    z-index: 1;
+    outline: none; /*remove o contorno ao clicar no input*/
+    transition: 0.5s;
+}
+
+.cabecalho__pesquisa input:hover {
+    scale: 1.05;
+}
+
+.cabecalho__pesquisa input::placeholder {
+    color: var(--cor-links);
+}
+
+.cabecalho__pesquisa img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%); /*junto com o top 50%, deixa o elemento no centro vertical*/
+    width: 24px;
+    height: 24px;
+    pointer-events: none; /*impede o elemento de ser selecionado*/
+}
+
+.menu__suspenso {
+    display: none;
+}
+
+@media screen and (max-width: 1280px) {
+    .cabecalho__nav__lista {
+        grid-template-areas: /*altera o template do grid para colocar a pesquisa em outra linha*/
+        "logo sobre login usuario carrinho"
+        "input input input input input";
+        grid-template-columns: 1fr auto auto auto auto;
+    }
+    .cabecalho__logo {
+        grid-area: logo; /*define a posição do elemento*/
+    }
+    .cabecalho__sobre {
+        grid-area: sobre;
+    }
+    .cabecalho__pesquisa {
+        grid-area: input;
+    }
+    .cabecalho__login {
+        grid-area: login;
+    }
+    .cabecalho__usuario {
+        grid-area: usuario;
+    }
+    .cabecalho__carrinhoo {
+        grid-area: usuario;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cabecalho__nav__lista {
+        grid-template-areas:
+        "menu logo usuario carrinho"
+        "input input input input";
+        grid-template-columns: auto 1fr auto auto;
+        justify-content: space-between;
+    }
+
+    .menu__suspenso {
+        grid-area: menu;
+        display: block;
+        position: relative;
+    }
+    .menu {
+        display: none;
+    }
+    
+    .menu:checked ~ .menu__suspenso__lista {
+        max-height: 120px; /* ajuste conforme seu conteúdo */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu__suspenso__icon {
+        height: auto;
+        width: 30px;
+    }
+
+    .menu__suspenso__lista {
+        position: absolute;
+        z-index: 2;
+        left: -50px;
+        top: 60px;
+        background-color: var(--cor-texto);
+        min-width: 100vw;
+        list-style: none;
+        box-shadow: 0 0 5px #12121250;
+      
+        /* Escondido inicialmente */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.5s ease;
+    }
+
+    .menu__suspenso__lista__item {
+        padding: 12px 50px;
+    }
+    .menu__suspenso__lista__item a {
+        font-family: var(--fonte-texto);
+        color: var(--cor-link);
+        font-size: 20px;
+    }
+
+    .cabecalho__sobre {
+        display: none;
+    }
+    .cabecalho__login {
+        display: none;
+    }
+}
